@@ -1,0 +1,13 @@
+{
+    "require": {
+        "brick/brick": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Project\\": "src/"
+        }
+    }
+}
