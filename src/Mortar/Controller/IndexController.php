@@ -1,6 +1,6 @@
 <?php
 
-namespace Project\Controller;
+namespace Mortar\Controller;
 
 use Brick\Http\Request;
 use Brick\Http\Response;
