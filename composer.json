@@ -1,6 +1,7 @@
 {
     "require": {
-        "brick/brick": "dev-master"
+        "brick/brick": "dev-master",
+        "doctrine/common": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
