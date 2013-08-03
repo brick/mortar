@@ -10,10 +10,6 @@ use Doctrine\Common\Annotations\AnnotationReader;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-// @todo these annotation classes are not autoloaded by the annotation reader, investigate why
-spl_autoload_call('Brick\Controller\Annotation\QueryParam');
-spl_autoload_call('Brick\DependencyInjection\Annotation\Inject');
-
 // Create an annotation reader, and an injection policy based on annotations.
 $annotationReader = new AnnotationReader();
 $injectionPolicy = new AnnotationPolicy($annotationReader);
