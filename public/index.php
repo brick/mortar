@@ -5,6 +5,8 @@ use Brick\Routing\Route\StandardRoute;
 use Brick\Controller\EventListener\RequestParamListener;
 use Brick\DependencyInjection\Container;
 use Brick\DependencyInjection\InjectionPolicy\AnnotationPolicy;
+use Brick\View\ViewRenderer;
+use Brick\View\InjectorViewRenderer;
 use Doctrine\Common\Annotations\AnnotationReader;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -15,7 +17,7 @@ $injectionPolicy = new AnnotationPolicy($annotationReader);
 
 // Create and configure the dependency injection container.
 $container = new Container($injectionPolicy);
-$container->bind('Brick\View\ViewRenderer')->to('Brick\View\InjectorViewRenderer');
+$container->bind(ViewRenderer::class)->to(InjectorViewRenderer::class)
 
 // Create the application.
 $application = Application::createWithContainer($container);
