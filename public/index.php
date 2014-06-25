@@ -1,6 +1,5 @@
 <?php
 
-use Brick\Http\Request;
 use Brick\Application\Application;
 use Brick\Routing\Route\StandardRoute;
 use Brick\Controller\EventListener\RequestParamListener;
@@ -16,7 +15,7 @@ $injectionPolicy = new AnnotationPolicy($annotationReader);
 
 // Create and configure the dependency injection container.
 $container = new Container($injectionPolicy);
-$container->bind('Brick\View\ViewRenderer')->toClass('Brick\View\InjectorViewRenderer');
+$container->bind('Brick\View\ViewRenderer')->to('Brick\View\InjectorViewRenderer');
 
 // Create the application.
 $application = Application::createWithContainer($container);
@@ -35,6 +34,7 @@ $application->addRoute(new StandardRoute('Mortar\Controller'));
  */
 $application->addEventListener(new RequestParamListener($annotationReader));
 
-$request = Request::getCurrent();
-$response = $application->handle($request);
-$response->send();
+/*
+ * Run the application.
+ */
+$application->run();
