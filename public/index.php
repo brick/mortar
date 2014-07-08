@@ -17,7 +17,7 @@ $injectionPolicy = new AnnotationPolicy($annotationReader);
 
 // Create and configure the dependency injection container.
 $container = new Container($injectionPolicy);
-$container->bind(ViewRenderer::class)->to(InjectorViewRenderer::class)
+$container->bind(ViewRenderer::class)->to(InjectorViewRenderer::class);
 
 // Create the application.
 $application = Application::createWithContainer($container);
