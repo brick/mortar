@@ -1,12 +1,10 @@
 <?php
 
 use Brick\Application\Application;
+use Brick\Application\Plugin\RequestParamPlugin;
 use Brick\Routing\Route\StandardRoute;
-use Brick\Controller\EventListener\RequestParamListener;
-use Brick\DependencyInjection\Container;
-use Brick\DependencyInjection\InjectionPolicy\AnnotationPolicy;
-use Brick\View\ViewRenderer;
-use Brick\View\InjectorViewRenderer;
+use Brick\Di\Container;
+use Brick\Di\InjectionPolicy\AnnotationPolicy;
 use Doctrine\Common\Annotations\AnnotationReader;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -17,7 +15,6 @@ $injectionPolicy = new AnnotationPolicy($annotationReader);
 
 // Create and configure the dependency injection container.
 $container = new Container($injectionPolicy);
-$container->bind(ViewRenderer::class)->to(InjectorViewRenderer::class);
 
 // Create the application.
 $application = Application::createWithContainer($container);
@@ -34,7 +31,7 @@ $application->addRoute(new StandardRoute('Mortar\Controller'));
  * use Brick\Controller\ParameterConverter\DoctrineConverter;
  * new RequestParamListener($annotationReader, new DoctrineConverter($entityManager))
  */
-$application->addEventListener(new RequestParamListener($annotationReader));
+$application->addPlugin(new RequestParamPlugin($annotationReader));
 
 /*
  * Run the application.

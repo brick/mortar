@@ -2,8 +2,9 @@
 
 namespace Mortar\Controller;
 
-use Brick\Controller\AbstractController;
-use Brick\Controller\Annotation\QueryParam;
+use Brick\Application\Controller\AbstractController;
+use Brick\Application\Controller\Annotation\QueryParam;
+
 use Mortar\View\HelloView;
 use Mortar\View\IndexView;
 

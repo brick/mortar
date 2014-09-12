@@ -2,9 +2,9 @@
 
 namespace Mortar\View;
 
-use Brick\View\AbstractView;
+use Brick\View\ClassView;
 
-class HelloView extends AbstractView
+class HelloView extends ClassView
 {
     protected $name;
 

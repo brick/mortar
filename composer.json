@@ -10,5 +10,7 @@
         "psr-0": {
             "Mortar\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

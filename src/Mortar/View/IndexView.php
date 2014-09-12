@@ -2,8 +2,8 @@
 
 namespace Mortar\View;
 
-use Brick\View\AbstractView;
+use Brick\View\ClassView;
 
-class IndexView extends AbstractView
+class IndexView extends ClassView
 {
 }
