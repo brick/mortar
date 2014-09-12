@@ -2,18 +2,23 @@
 
 namespace Mortar\Controller;
 
-use Brick\Http\Request;
-use Brick\Http\Response;
+use Brick\Controller\AbstractController;
+use Brick\Controller\Annotation\QueryParam;
+use Mortar\View\HelloView;
+use Mortar\View\IndexView;
 
-class IndexController
+class IndexController extends AbstractController
 {
     public function indexAction()
     {
-        return new Response('Hello world');
+        return $this->render(new IndexView());
     }
 
-    public function helloAction(Request $request)
+    /**
+     * @QueryParam("name")
+     */
+    public function helloAction($name)
     {
-        return new Response('Hello ' . $request->getQuery('name'));
+        return $this->render(new HelloView($name));
     }
 }

@@ -2,6 +2,8 @@ Mortar
 ======
 
 Skeleton application for the Brick framework.
+This is a more complete implementation adding dependency injection, and injection of request parameters
+into controller actions.
 
 How to run it
 -------------
@@ -20,12 +22,12 @@ Now create a virtual host in `httpd.conf` pointing to the `public` directory:
 	    DocumentRoot /path/to/mortar/public
     </VirtualHost>
 
+Then restart Apache.
+
 Finally, create an entry for this virtual host in your `hosts` file:
 
     127.0.0.1 mortar.localhost
 
-You should now be able to browse the examples:
+You should now be able to open the application:
 
-* http://mortar.localhost/
-* http://mortar.localhost/index/hello?name=John
-
+http://mortar.localhost/
