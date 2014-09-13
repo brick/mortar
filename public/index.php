@@ -2,7 +2,7 @@
 
 use Brick\Application\Application;
 use Brick\Application\Plugin\RequestParamPlugin;
-use Brick\Routing\Route\StandardRoute;
+use Brick\Application\Route\StandardRoute;
 use Brick\Di\Container;
 use Brick\Di\InjectionPolicy\AnnotationPolicy;
 use Doctrine\Common\Annotations\AnnotationReader;
