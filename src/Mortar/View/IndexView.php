@@ -2,7 +2,7 @@
 
 namespace Mortar\View;
 
-use Brick\Application\View\ClassView;
+use Brick\App\View\ClassView;
 
 class IndexView extends ClassView
 {

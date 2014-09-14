@@ -1,8 +1,8 @@
 <?php
 
-use Brick\Application\Application;
-use Brick\Application\Plugin\RequestParamPlugin;
-use Brick\Application\Route\StandardRoute;
+use Brick\App\Application;
+use Brick\App\Plugin\RequestParamPlugin;
+use Brick\App\Route\StandardRoute;
 use Brick\Di\Container;
 use Brick\Di\InjectionPolicy\AnnotationPolicy;
 use Doctrine\Common\Annotations\AnnotationReader;

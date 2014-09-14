@@ -1,7 +1,7 @@
 {
     "require": {
-        "brick/brick": "dev-master",
-        "doctrine/common": "*"
+        "brick/app": "dev-master",
+        "doctrine/annotations": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
